@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="/css/style.css" rel="stylesheet">
+        <link  rel="icon" href="/images/weather.png">
+    <script defer type="text/javascript" src="/script/script.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="flex">
+    <header>
+         {{>header}}
+    </header>
+    <div class="body">
+        Current weather forecast of {{body}} is {{forecast}}
+    </div>
+    </div>
+    <footer>
+           {{>footer}}
+    </footer>
+    </div>
+</body>
+</html>

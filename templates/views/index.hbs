@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="/css/style.css" rel="stylesheet">
+        <link  rel="icon" href="/images/weather.png">
+</head>
+<body>
+    <div class="container">
+    <div class="flex">
+    <header>
+         {{>header}}
+    </header>
+    <div class="body">
+        {{body}}
+        </br></br>
+        <form class="form" action="/" method="POST">
+            <input class="location_entered" name="location_entered" placeholder="Enter your location" autocomplete="off">
+             <button class="btn">Search</button>
+        </form>
+        <div class="information">
+            <div class="element">
+              <div class="title">Location-Entered</div>
+              <div class="value">
+                <p id="location"></p>
+              </div>
+            </div>
+            <div class="element">
+              <div class="title">Overall Forecast</div>
+              <div class="value">
+                 <p id="weatherOverall"></p>
+              </div>
+            </div>
+            <div class="element">
+              <div class="title">Temperature</div>
+              <div class="value">
+                 <p id="weatherTemperature"></p>
+              </div>
+            </div>
+            <div class="element">
+              <div class="title">Temperature Feels Like</div>
+              <div class="value">
+                 <p id="weatherFeelsLike"></p>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+           {{>footer}}
+    </footer>
+    </div>
+    <script type="text/javascript" src="/script/script.js"></script>
+</body>
+</html>

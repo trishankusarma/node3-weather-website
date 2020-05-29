@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+ }
+body{
+    background-color:lightblue;
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    font-family:sans-serif;
+    display:flex;
+}
+.container{
+    max-width:60vw;
+    max-height:85vh;
+    margin-left:20vw;
+    margin-top:10vh;
+    display:flex;
+    flex-direction:column;
+}
+header{
+    border-bottom:0.5px  solid grey;
+}
+header h2{
+    font-size:300%;
+    padding-bottom:30px;
+    position: relative;
+}
+header div{
+    padding-bottom:8px;
+    position: relative;
+}
+header a{
+    text-decoration:none;
+    color:#333300;
+    margin-left:10px;
+    margin-top:-15px;
+    position:absolute;
+}
+header a:hover{
+    font-weight:bold;
+    color:black;
+    border-bottom:2px grey solid;
+}
+.container .flex{
+    flex-grow:1;
+}
+.body{
+    padding-top:35px;
+    color:black;
+}
+.image{
+    height:20vh;
+    border-radius: 50%;
+}
+footer{
+    border-top:0.5px solid grey;
+}
+.focus{
+    border-bottom:2px solid red;
+}
+input{
+    width:20vw;
+    height:5vh;
+    padding:1vh;
+}
+.information{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    padding-top:5vh;
+}
+.information .element{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    padding-left:5vh;
+}
+.information .element .title{
+    font-weight:bold;
+    color:grey;
+    border-bottom:1px grey solid;
+}
+.information .element .value{
+    font-size:120%;
+    color:black;
+    padding-top:2vh;
+    text-align: center;
+}

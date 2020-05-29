@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOG IN FORM</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <style type="text/css">
+    	*{
+           margin:0;
+           padding:0;
+           box-sizing:border-box;
+    	}
+    	body{
+    		width:100vw;
+    		height:100vh;
+    		display:flex;
+    		flex-direction:row;
+    		overflow:hidden;
+    		font-family:poppins;
+    	}
+    	.deco_con{
+    		width:50vw;
+    		height:100vh;
+    	}
+    	.deco_con .wave{
+    		position:absolute;
+    		width:40vw;
+    		height:100vh;
+    		z-index:1;
+    	}
+    	.deco_con .bg{
+    		position:absolute;
+    		margin-top:-5vh;
+    		margin-left:5vw;
+    		width:40vw;
+    		height:100vh;
+    		z-index:2;
+    	}
+    	.container{
+    		width:50vw;
+    		height:100vh;
+    	}
+    	.container .login-container{
+    		width:50vw;
+    		height:100vh;
+    		display:flex;
+    		flex-direction:column;
+    		justify-content:center;
+    		align-items: center;
+    		margin-left:-5vw;
+    	}
+    	.container .login-container .avatar{
+    		width:10vw;
+    		height:20vh;
+    		margin-top:10vh;
+    	}
+    	.container .login-container h1{
+    		font-size:200%;
+    	}
+    	.container .login-container .input_Div{
+            width:25vw;
+    		height:10vh;
+    		display:flex;
+    		flex-direction:row;
+            justify-content:center;
+            margin-top:5vh;
+            color:grey;
+            font-size:150%;
+            border-bottom:2px grey solid;
+            position:relative;
+    	}
+    	.container .login-container .input_Div.focus > .i > i{
+    	  color: #38d39f;
+    	}
+    	.container .login-container .input_Div.focus > .user .hfive h5{
+    		 transform:translateY(0%);
+    		 transition:0.3s;
+    		 font-size:18px;
+    		  color: #38d39f;
+    	}
+    	.container .login-container .input_Div.focus > .user .input input{
+    		 transform:scaleX(1);
+    		 transition:0.5s;
+   	}
+   	    .container .login-container .input_Div.focus {
+   	    	border-bottom:2px solid #38d39f;
+   	    	transition:0.5s; 
+   	    }
+    	.container .login-container .input_Div input{
+    		position:absolute;
+    		 width:90%;
+    		height:100%;
+    		top:0vh;
+    		bottom:0;
+    		outline:none;
+    		left:38px;
+    		font-size:85%;
+    		border:none;
+    		top:2px;
+    		transition:0.5s;
+    		transform:scaleX(0);
+    		border-bottom:2px #38d39f solid;
+    	}
+    	.container .login-container .input_Div .user .hfive h5{
+            transform:translateY(100%);
+            margin-left:-40%;
+            margin-top:-3vh;
+            position:absolute;
+            font-size:21px;
+            z-index:100;
+    	}
+    	.container .login-container .input_Div .i{
+    		position:absolute;
+    		margin-top:1vh;
+    		margin-left:-45%;
+    	}
+    	.container .login-container .submit{
+    		width:25vw;
+    		height:10vh;
+    		background-color:green;
+            color:white;
+            font-size:3.5vh;
+            border-radius:50px;
+            margin-bottom:100px; 
+            margin-top:50px;
+            background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    	}
+    	.container .login-container .submit:hover{
+    	    cursor:pointer;
+    		outline:none;
+    		background-color:green;
+    	}
+    	.main{
+    		margin-top:10px;
+    	}
+    	.main .a{
+    		text-decoration:none;
+    		color:grey;
+    	}
+    	.main .forgot{
+    		margin-left:80px; 
+    	}
+    	.main .register{
+    		margin-left:0px; 
+    	}
+    </style>
+</head>
+<body>
+	<div class="deco_con">
+      <img src="images/wave.png" class="wave">
+      <img src="images/bg.svg" class="bg">
+    </div>
+    <div class="container">
+    	 <form action='/login' method="POST">
+    	<div  class="login-container">
+            <img src="images/avatar.svg" class="avatar">
+            <h1>WELCOME</h1>
+            <% if (messages.error) { %>
+            <%= messages.error %>
+            <% } %>
+            <div class="input_Div">
+            	<div class="i">
+            		<i class="fas fa-user"></i>
+            	</div>
+            	<div class=" user useremail">
+            		<span class="hfive">
+               		  <h5>Email</h5>
+            		</span>
+            		<div class="input">
+            			<input type="text" name="email" class="email" required autocomplete="off">
+            		</div>
+            	</div>
+            </div>
+             <div class="input_Div">
+            	<div class="i">
+            		<i class="fas fa-lock"></i>
+            	</div>
+            	<div class="user userpassword">
+            		<span class="hfive">
+            		    <h5>Password</h5>
+            		</span>
+            		<div class="input">
+            			<input type="password" name="password" class="password" required autocomplete="off">
+            		</div>
+            	</div>
+            </div>
+            <span class="main">
+            	 <a class="a register" href="/">Create account?</a>
+                 <a class="a forgot" href="/">Forgot Password</a>
+            </span>
+            <input class="submit" type="submit" value="LOG IN">
+    	</div>
+        </form>
+    </div>
+    <script type="text/javascript">
+const input_Divs = document.querySelectorAll(".input_Div");
+
+
+function addcl(){
+	this.classList.add("focus");
+}
+
+function remcl(){
+	if(this.value == ""){
+	this.classList.remove("focus");
+    }
+}
+
+
+input_Divs.forEach(input_Div => {
+	input_Div.addEventListener("mouseover", addcl);
+	input_Div.addEventListener("mouseout", remcl);
+});
+
+    </script>
+</body>
+</html>
