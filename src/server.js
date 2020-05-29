@@ -5,7 +5,7 @@ const hbs=require("hbs");
 const geocode=require('../utility/geocode.js');
 const weatherforecast=require('../utility/weatherforecast.js');
 
-
+const port=process.env.PORT||8080;
 //middlewares
 app.use(express.urlencoded({extended:false}));
 
@@ -97,4 +97,6 @@ app.get("*",(req,res)=>{
     })
 })
 
-app.listen(8080);
+app.listen(port,()=>{
+    console.log("server running on port "+port);
+});

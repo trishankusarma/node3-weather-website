@@ -22,7 +22,7 @@ searchForm.addEventListener("submit",(e)=>{
     weatherTemperature.textContent="";
     weatherFeelsLike.textContent="";
 
-    const url="http://localhost:8080/weather?address="+address;
+    const url="/weather?address="+address;
     fetch(url).then((response)=>{
         response.json().then((data)=>{
            if(data.error)
