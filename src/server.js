@@ -19,9 +19,6 @@ app.set('view engine','hbs');
 app.set("views",viewsDirectory);
 hbs.registerPartials(partialDirectory);
 
-console.log(__dirname);
-console.log(path.join(__dirname,"/public"));
-
 //set up dynamic directory to server
 app.get("/",(req,res)=>{
     res.render("index",{
